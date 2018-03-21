@@ -1,0 +1,14 @@
+h1{
+	text-align: center;
+	font-size: 100px;
+}
+
+#logo{
+	position: absolute;
+	left: 100px;
+}
+
+#warehouse{
+	margin-left: 10px;
+	border: 10px solid black;
+}
