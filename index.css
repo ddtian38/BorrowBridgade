@@ -39,10 +39,20 @@ li a:hover {
 
 div#warehouse{
 	float:left;
+	width:40%;
 	display:inline-block;
 }
 div#description{
+	float:left;
+	width:50%;
 	margin:10px;
+	margin-top:20px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 
