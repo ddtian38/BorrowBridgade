@@ -8,9 +8,9 @@ h1{
 	left: 100px;
 }
 
-#warehouse{
-	margin-left: 10px;
-	border: 10px solid black;
+img#warehouse{
+	margin: 10px;
+	border: 2px solid black;
 }
 ul.navbar {
     list-style-type: none;
@@ -33,10 +33,20 @@ li a {
     text-decoration: none;
 }
 
-/* Change the link color to #111 (black) on hover */
 li a:hover {
     background-color: #111;
 }
+
+div#warehouse{
+	float:left;
+	display:inline-block;
+}
+div#description{
+	margin:10px;
+}
+
+
+
 
 /*
 ul.navbar {
