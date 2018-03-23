@@ -111,3 +111,24 @@ input[type=reset] {
 #logo {
     display: inline;
 }
+
+.nav {
+  font-family: Franklin, Serif;
+  vertical-align: middle;
+  text-align: center;
+  text-decoration: none;
+  border-top: 1px double;
+  border-bottom:1px double;
+  font-size:20px;
+}
+
+.nav a:hover {
+  text-decoration: none;
+  color: #000;
+  background: #999;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #000;
+}
