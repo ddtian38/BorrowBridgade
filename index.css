@@ -1,52 +1,36 @@
-h1{
-	text-align: center;
-	font-size: 100px;
+body {
+    margin:auto;
 }
 
-#logo{
+h1 {
+	text-align: center;
+	font-size: 85px;
+}
+
+#logo {
 	position: absolute;
 	left: 100px;
 }
 
-img#warehouse{
+img#warehouse {
 	margin: 10px;
 	border: 2px solid black;
 }
-ul.navbar {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-}
 
-ul.navbar li {
-    float: left;
-    padding-right:30px;
-}
-
-ul.navbar a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-ul.navbar li a:hover {
-    background-color: #111;
-}
-
-div#warehouse{
+div#warehouse {
 	float:left;
 	width:40%;
 	display:inline-block;
 }
-div#description{
+
+.description {
+    font-family: Courier, Monospace;
+    font-size: 20px;
 	float:left;
 	width:50%;
 	margin:10px;
 	margin-top:20px;
+    padding-left: 25px;
 }
 
 .row:after {
@@ -61,8 +45,6 @@ div#miscellaneous{
 div#miscellaneous ul{
 	list-style:none;
 }
-
-
 
 div#miscellaneous ul li{
 	text-align:center;
@@ -79,30 +61,30 @@ div#miscellaneous ul li a{
 	margin-right:15px;
 }
 
-div#footer{
+.footer{
 	float:bottom;
+    text-align: center;
 	margin-top:120px;
 	border-top: solid black 2px;
 }
-/*
-ul.navbar {
-	list-style-type:none;
-	margin-bottom: 30px;
-    padding-bottom: 20px;
+
+.nav {
+  font-family: Franklin, Serif;
+  vertical-align: middle;
+  text-align: center;
+  text-decoration: none;
+  border-top: 1px double;
+  border-bottom:1px double;
+  font-size:20px;
 }
 
-li {
-    float: left;
+.nav a:hover {
+  text-decoration: none;
+  color: #000;
+  background: #999;
 }
 
-li a {
-    display: inline;
-    text-decoration: none;
-    padding-left: 300px;
-    padding-right: 300px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-
-    background-color: #dddddd;
+.nav a {
+  text-decoration: none;
+  color: #000;
 }
-*/
