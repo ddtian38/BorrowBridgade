@@ -12,7 +12,7 @@
 	  <a href="#">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	  <a href="#">Login</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	  <a href="#">Sign-up</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	  <a href="#">Contact</a>
+	  <a href="contact.html">Contact</a>
 	</div>
 	<div class="row">
 	  <div class="warehouse">
@@ -22,30 +22,26 @@
 	  	Never lose track of your tools, games or supplies ever again from BorrowBrigade! BorrowBrigade is a system to take control of what's yours. BorrowBrigade uses a database backend where you control what goes in and what goes out. You get to determine who borrows what, when, and for how long.
 	  </div>
 	</div>
-
-	<div id="slideshow" style="border: 20px solid black;">
-		<img id="places" height="480" width="640" src="sharing-hands.jpg" alt="nice building">
+<hr>
+	<div id="slideshow" style="border: 2px solid black;">
+		<img id="places" height="480" width="640" src="sharing-hands.jpg" alt="">
 		<div><p id="caption">I no longer need to go all the way to the store to pick up something that I'll only use once.</p></div>
 		<script type = "text/javascript">
-			var nextSlide = setInterval(change,7000);
+			var nextSlide = setInterval(change,5000);
 			var slide = document.getElementById("places");
-			var imgArray = ["sharing-hands.jpeg","angry.jpg","akshardham_temple.jpg","char_minar.jpg","hawa_mahal.jpeg","mysore_palace.jpeg","sun_temple.jpg","taj_mahal.jpeg","victoria_memorial.jpg","mumbai.jpeg"];
-			var captionArray = ["I no longer need to go all the way to the store to pick up something that I'll only use once.","My friend had a bad habit of borrowing things and returning them up to a year later. With BorrowBrigade we have a way to keep track of what he needs to return.","Akshardham Temple","Char Minar","Hawa Mahal","Mysore Palace","Sun Temple","Taj Mahal","Victoria Memorial","Mumbai"];
+			var imgArray = ["sharing-hands.jpg","angry.jpg"];
+			var captionArray = ["I no longer need to go all the way to the store to pick up something that I'll only use once.","My friend had a bad habit of borrowing things and returning them up to a year later. With BorrowBrigade we have a way to keep track of what he needs to return."];
 			var v = 0;
 			var caption = document.getElementById("caption");
 			function change(){
 				v = v + 1;
-				if(v>=imgArray.length){
+				if(v >= imgArray.length){
 					v=0;
 				}
 				slide.src=imgArray[v];
 				caption.innerHTML = captionArray[v];
 			}
-
 		</script>
-
-	<hr>
-
 	</div>
 	<hr>
 	<div id="miscellaneous">

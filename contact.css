@@ -1,0 +1,113 @@
+html {
+  padding: 20px;
+  background-color: #fff;
+}
+
+body {
+  font-family: Courier, Monospace;
+  margin: auto;
+  max-width: 65%;
+}
+
+form {
+  background-color: #fff;
+  padding: 20px;
+  border: 3px solid #000;
+  border-radius: 5px;
+}
+
+h1 {
+  font-family: Courier, Monospace;
+  color: #000;
+  margin:auto;
+  text-align:center;
+}
+
+h3 {
+  font-family: Courier, Monospace;
+}
+
+div {
+  padding: 10px;
+}
+
+input[type=text] {
+  font-family: Courier, Monospace;
+  font-size: 12px;
+  padding: 5px;
+  margin: 5px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+label {
+  cursor: pointer;
+  display: block;
+  position: relative;
+  padding-left: 15px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+input[type=checkbox], input[type=radio] {
+  visibility:hidden;
+}
+
+.mark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #fff;
+  border-radius: 15px;
+  border: 1px solid #ff5300;
+}
+
+label input:checked ~ .mark {
+  background-color: #ff5300;
+}
+
+input[type=text]:focus, select:focus {
+  border: 1px solid #000;
+  outline: none;
+}
+
+textarea {
+  font-family: Courier, Monospace;
+  font-size: 12px;
+  padding: 5px;
+  margin: 5px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+textarea:focus {
+  border: 1px solid #000;
+  outline: none;
+}
+
+input[type=button], input[type=reset] {
+  color: white;
+  width: 100px;
+  padding: 5px;
+  border: 1px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  outline: none;
+}
+
+input[type=button] {
+  background-color: #008000;
+}
+
+input[type=reset] {
+  background-color: #ff0000;
+}
+
+#logo {
+    display: inline;
+}
