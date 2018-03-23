@@ -33,7 +33,7 @@ ul.navbar a {
     text-decoration: none;
 }
 
-li a:hover {
+ul.navbar li a:hover {
     background-color: #111;
 }
 
@@ -67,11 +67,23 @@ div#miscellaneous ul{
 div#miscellaneous ul li{
 	text-align:center;
 	float:left;
-	width:24%;
-	border-right:solid 1px black;
-	border-left:solid 1px black;
+	width:23%;
+	border:solid 1px black;
+	margin-right:3px;
+	height:75px;
 }
 
+div#miscellaneous ul li a{
+	text-decoration: none;
+	margin-left:15px;
+	margin-right:15px;
+}
+
+div#footer{
+	float:bottom;
+	margin-top:120px;
+	border-top: solid black 2px;
+}
 /*
 ul.navbar {
 	list-style-type:none;
