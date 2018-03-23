@@ -77,6 +77,28 @@ div#miscellaneous ul li a{
 	margin-right:15px;
 }
 
+div#slideshow {
+  text-align: center;
+  margin:auto;
+  max-height:5%;
+  max-width: 50%;
+}
+
+span#caption {
+  text-align:justify;
+  max-width: 50%;
+  font-family: Courier, Monospace;
+}
+
+img#places {
+  max-height: 300px;
+  width:auto;
+}
+
+span#photo {
+  text-align: center;
+}
+
 .footer {
 	float:bottom;
     text-align: center;
