@@ -1,15 +1,28 @@
 body {
     margin:auto;
+    max-width: 80%;
 }
 
 h1 {
 	text-align: center;
 	font-size: 85px;
+    margin-top: 1.5%;
+    margin-bottom: 1.5%;
+    width:20%;
+    float:left;
+}
+
+.header {
+    text-align: center;
+    margin:auto;
+    overflow: auto;
+    width:80%;
 }
 
 #logo {
-	position: absolute;
-	left: 100px;
+    margin-top: 1.5%;
+    display: inline;
+    float:left
 }
 
 img#warehouse {
@@ -17,10 +30,11 @@ img#warehouse {
 	border: 2px solid black;
 }
 
-div#warehouse {
+.warehouse {
 	float:left;
 	width:40%;
-	display:inline-block;
+	display:block;
+    vertical-align: middle;
 }
 
 .description {
@@ -34,6 +48,7 @@ div#warehouse {
 }
 
 .row:after {
+    width:100%;
     content: "";
     display: table;
     clear: both;
@@ -61,7 +76,7 @@ div#miscellaneous ul li a{
 	margin-right:15px;
 }
 
-.footer{
+.footer {
 	float:bottom;
     text-align: center;
 	margin-top:120px;
