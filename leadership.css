@@ -1,0 +1,134 @@
+body {
+    margin:auto;
+    max-width: 80%;
+}
+
+h1 {
+    font-family: Courier, Monospace;
+	text-align: center;
+	font-size: 85px;
+    margin-top: 1.5%;
+    margin-bottom: 1.5%;
+    width:20%;
+    float:left;
+}
+
+.header {
+    text-align: center;
+    margin:auto;
+    overflow: auto;
+    width:80%;
+}
+
+#logo {
+    margin-top: 1.5%;
+    display: inline;
+    float:left
+}
+
+img#warehouse {
+	margin: 10px;
+	border: 2px solid black;
+}
+
+.warehouse {
+	float:left;
+	width:40%;
+	display:block;
+    vertical-align: middle;
+}
+
+.description {
+    font-family: Courier, Monospace;
+    font-size: 20px;
+	float:left;
+	width:50%;
+	margin:10px;
+	margin-top:20px;
+    padding-left: 25px;
+}
+
+.row:after {
+    width:100%;
+    content: "";
+    display: table;
+    clear: both;
+}
+p.more{
+  display:none;
+}
+div#people{
+	float:left;
+	width:100%;
+}
+div#people ul{
+	list-style:none;
+  list-style-type:none;
+}
+
+div#people ul li{
+	text-align:center;
+  text-indent: none;
+  list-style: none;
+	float:left;
+	width:32%;
+	border:solid 1px black;
+	margin-right:3px;
+	height:auto;
+}
+
+div#people ul li img{
+	width:90%;
+  height:auto;
+
+}
+
+div#slideshow {
+  text-align: center;
+  margin:auto;
+  max-height:5%;
+  max-width: 50%;
+}
+
+span#caption {
+  text-align:justify;
+  max-width: 50%;
+  font-family: Courier, Monospace;
+}
+
+img#places {
+  max-height: 300px;
+  width:auto;
+}
+
+span#photo {
+  text-align: center;
+}
+
+.footer {
+	float:bottom;
+    text-align: center;
+	margin-top:120px;
+	border-top: solid black 2px;
+}
+
+.nav {
+  font-family: Franklin, Serif;
+  vertical-align: middle;
+  text-align: center;
+  text-decoration: none;
+  border-top: 1px double;
+  border-bottom:1px double;
+  font-size:20px;
+}
+
+.nav a:hover {
+  text-decoration: none;
+  color: #000;
+  background: #999;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #000;
+}
