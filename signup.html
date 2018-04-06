@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Signup</title>
+	<link rel="stylesheet" type="text/css" href="signup.css">
+
+</head>
+<body>
+	<div class="header"><img id="logo" src="bblogo.jpg" width="100" height="100">&nbsp;
+	<h1>BorrowBrigade</h1></div>
+	<div class="nav">
+	  <a href="#">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  <a href="#">Login</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  <a href="#">Sign-up</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  <a href="contact.html">Contact</a>
+	</div>
+
+<h2>Create an Account</h2><hr>
+
+<div id="container">
+	<form id="userForm" method= "post" action="http://www.cknuckles.com/cgi/echo.cgi">
+		<div>
+			<label for="fname">First Name:</label>
+			<input type="text" name="fname" id="fname" placeholder="ex: Jeffrey">&nbsp;&nbsp;&nbsp;
+
+			<label for="lname">Last Name:</label>
+			<input type="text" name="fname" id="lname" placeholder="ex: Ng">
+		</div>
+
+		<div>
+			<label for="email">Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+			<input type="text" id="email" name="email" placeholder="ex: janedoe123@gmail.org">
+		</div>		
+		<div>
+			<label for="user">Username:</label>
+			<input type="text" id="user" name="user" placeholder="ex: ddtian38">
+		</div>
+		<div>
+			<label for="password">Password:</label>
+			<input type="password" id="password" name="password">
+		</div>
+		<div>
+			<label for="repeatPassword"> Repeat Password:</label>
+			<input type="password" id="repeatPassword" name="repeatPassword">
+		</div>
+		<div id="buttons">
+			<input type="submit" name="register" value="Register">
+			<input type="reset" value="Reset">			
+		</div>	
+	</form>
+
+</div>
+
+	<div class="footer">
+		<p>&copy; BorrowBrigade by DaNaWeiWare 2018 &middot; <a href="mailto:nathanrb@cs.utexas.edu">email</a></p>
+		
+	</div>		
+	<script src="signup.js"></script>
+</body>
+</html>
