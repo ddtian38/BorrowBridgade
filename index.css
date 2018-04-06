@@ -146,8 +146,8 @@ span#photo {
   position: absolute;
   top: 50%;
   width: auto;
-  margin-top: -30px;
-  padding: 16px;
+  margin-top: 0px;
+  padding: 5px;
   color: #888;
   font-weight: bold;
   font-size: 20px;
