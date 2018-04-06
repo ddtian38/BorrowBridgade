@@ -1,6 +1,6 @@
 $(document).ready(function(){
-	var moreText = "Read more",
-    lessText = "Read less",
+	var moreText = "Read More",
+    lessText = "Read Less",
     moreButton = $("a.readmorebtn");
     console.log(moreButton.text());
 	moreButton.click(function () {

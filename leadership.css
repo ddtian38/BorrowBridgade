@@ -77,6 +77,11 @@ div#people ul li{
 	height:auto;
 }
 
+img#NB {
+	height:283.375px;
+	width:283.375px;
+}
+
 div#people ul li img{
 	width:90%;
   height:auto;
