@@ -7,9 +7,12 @@ td:first-child{
   padding-bottom:20px;
 }
 body {
-  font-family: Courier, Monospace;
+  font-family: Times, Serif;
   margin: auto;
   max-width: 65%;
+}
+.footer {
+	text-align:center;
 }
 
 form {
