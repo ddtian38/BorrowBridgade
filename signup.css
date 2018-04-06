@@ -66,11 +66,11 @@ h2{
 
 #fname, #lname{
 
-  width: 300px;
+  width: auto;
 
 }
 input[type=email], input[type=text], input[type=password]{
-    width: 30%;
+    width: auto;
     margin-top: 10px;
     margin-bottom: 10px;
     margin-left: 20px;

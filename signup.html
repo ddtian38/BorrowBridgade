@@ -22,6 +22,23 @@
 
 <div id="container">
 	<form id="userForm" method= "post" action="http://www.cknuckles.com/cgi/echo.cgi">
+		<table>
+			<tr>
+				<td><label for="fname"><b>First Name:</b></label></td><td><input type="text" name="fname" id="fname" placeholder="ex: Jeffrey">&nbsp;&nbsp;&nbsp;</td><td><label for="lname"><b>Last Name:</b></label></td><td><input type="text" name="fname" id="lname" placeholder="ex: Ng"></td>
+			</tr>
+			<tr>
+				<td><label for="email"><b>Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></label></td><td><input type="text" id="email" name="email" placeholder="ex: janedoe123@gmail.org"></td>
+			</tr>
+			<tr>
+				<td><label for="user"><b>Username:</b></label></td><td><input type="text" id="user" name="user" placeholder="ex: ddtian38"></td>
+			</tr>
+			<tr>
+				<td><label for="password"><b>Password:</b></label></td><td><input type="password" id="password" name="password"></td>
+			</tr>
+			<tr>
+				<td><label for="repeatPassword"> <b>Repeat Password:</b></label></td><td><input type="password" id="repeatPassword" name="repeatPassword"></td>
+			</tr>
+		<!--	
 		<div>
 			<label for="fname">First Name:</label>
 			<input type="text" name="fname" id="fname" placeholder="ex: Jeffrey">&nbsp;&nbsp;&nbsp;
@@ -49,7 +66,13 @@
 		<div id="buttons">
 			<input type="submit" name="register" value="Register">
 			<input type="reset" value="Reset">			
-		</div>	
+		</div>
+	-->
+		</table>
+		<div id="buttons">
+			<input type="submit" name="register" value="Register">
+			<input type="reset" value="Reset">			
+		</div>
 	</form>
 
 </div>
