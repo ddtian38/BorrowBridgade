@@ -22,7 +22,7 @@
 <div id="container">
 	<div class="row">
 		<div class="column">
-			<form id="loginForm" method= "post" action="http://www.cknuckles.com/cgi/echo.cgi">		
+			<form id="loginForm" method= "post" action="loginVerify.php">		
 				<div>
 					<label for="user">Username:</label>
 					<input type="text" id="user" name="user">
@@ -50,5 +50,22 @@
 		<p>&copy; BorrowBrigade by DaNaWeiWare 2018 &middot; <a href="mailto:nathanrb@cs.utexas.edu">email</a></p>
 		
 	</div>		
+<script type="text/javascript">
+	function validate(event){
+		if (user.value === '' || password.value === ''){
+			alert("Username/password text field is blank. Please fill out both.")
+			event.preventDefault();
+			return false;
+		}
+		else{
+			return true;
+
+		}
+	}
+
+	var form = document.getElementById("loginForm");
+	form.addEventListener("submit", validate);
+</script>
+
 </body>
 </html>
