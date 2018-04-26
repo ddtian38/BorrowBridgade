@@ -3,12 +3,14 @@
 if(isset($_POST['submit'])){
 
 extract($_POST);
-$id = $_POST["identity"];
-$first = $_POST["firstname"];
-$last = $_POST["lastname"];
-$major = $_POST["major"];
-$gpa = $_POST["gpa"];
+$name = $_POST["name"];
+$category = $_POST["category"];
+$quantity = $_POST["quantity"];
+$location = $_POST["location"];
+$possessor = $_POST["possessor"];
 
+//generate a random unique id for each item entered
+$randid = substr(uniqid('', true), -6);
 // Connect to the MySQL database
 $host = "spring-2018.cs.utexas.edu";
 $user = "weiyi";
@@ -27,16 +29,17 @@ if (empty($connect))
 
 // Get data from a table in the database and print it out
 
-$table = "students";
-$stmt = mysqli_prepare ($connect, "INSERT INTO $table VALUES (?, ?, ?, ?, ?)");
-mysqli_stmt_bind_param ($stmt, 'ssssd',$id, $last, $first, $major, $gpa);
+$table = "items";
+$stmt = mysqli_prepare ($connect, "INSERT INTO $table VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+// Assumes that when the item is entered into the db, the original location and possessor are the current location and possessor
+mysqli_stmt_bind_param ($stmt, 'sssissss',$randid, $name, $category, $quantity, $location, $possessor, $location, $possessor);
 mysqli_stmt_execute($stmt);
 mysqli_stmt_close($stmt);
 
 
 mysqli_close($connect);
 
-echo "New student inserted";
+echo "New item $name added to location $location";
 
 }
 ?>
@@ -57,9 +60,19 @@ echo "New student inserted";
   Item Name:<br>
   <input type="text" name="name">
   <br>
+<!--
   Category:<br>
   <input type="text" name="category">
   <br>
+-->
+  Category:<br>
+  <select name="category">
+    <option value="Furniture">Furniture</option>
+    <option value="Games">Games</option>
+    <option value="Appliances">Appliances</option>
+    <option value="Tools">Tools</option>
+    <option value="Misc">Misc.</option>
+  </select><br>
   Quantity:<br>
   <input type="number" name="quantity">
   <br>
