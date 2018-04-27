@@ -2,10 +2,10 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="hwk16.css">
-<title> Delete Student Record </title>
+<title> Delete an Item </title>
 </head>
 <body>
-<h3> Delete Student Record </h3>
+<h3> Delete an Item </h3>
 
 <form method="POST" action="deleteResult.php">
 ID NUMBER: <input type="text" name="ID" required><br>

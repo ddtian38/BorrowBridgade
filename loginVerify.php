@@ -37,14 +37,14 @@ if(mysqli_stmt_num_rows($stmt) === 1){
 		if($row[6] === '1'){
 			$fname = $row[2];
                		session_start();
-			$_SESSION["user"] = $username;
+			$_SESSION["admin"] = $username;
 			header("location: adminhome.php ");
 		}
 		else{	
 			$fname = $row[2];
-			echo "<h1>Login Successful</h1><br><h3>Welcome '$fname'. You will be redirected home in 3 seconds...</h3>";
-			//session_start();
-			//header("location: ...... ");
+			session_start();
+			$_SESSION["user"] = $username;
+			header("location: userhome.php ");
 		}
 	}
 	else{

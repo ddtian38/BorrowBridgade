@@ -2,18 +2,24 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="hwk16.css">
-<title> Update Student Record </title>
+<title> Update Items </title>
+<style>
+td {text-align:right;}
+</style>
 </head>
 <body>
-<h3> Update Student Record </h3>
+<h3> Update Items </h3>
 
-<form method="POST" action="updateResult.php">
-ID NUMBER: <input type="text" name="ID" required><br>
-<br>LAST NAME: <input type="text" name="LAST"><br>
-<br>FIRST NAME: <input type="text" name="FIRST"><br>
-<br>MAJOR: <input type="text" name="MAJOR"><br>
-<br>GPA: <input type="text" name="GPA"><br>
+<form method="POST" action="viewResult.php">
+<table><tr><td>ITEM ID: <input type="text" name="id"></td><td></td></tr>
+<tr><td>NAME: <input type="text" name="NAME"></td>
+<td>CATEGORY: <input type="text" name="CAT"></td></tr>
+<tr><td>OG LOCATION: <input type="text" name="OGL"></td>
+<td>OG OWNER: <input type="text" name="OGO"></td></tr>
+<tr><td>CURRENT LOCATION: <input type="text" name"CL"></td>
+<td>CURRENT OWNER: <input type="text" name="CO"></td></tr></table>
 <br><input type="submit" value="Submit">&nbsp;<input type="reset" value="Reset">
+<br><br><input type="button" onclick="location.href='all.php';" value="View all Items" />
 </form>
 </body>
 </html>

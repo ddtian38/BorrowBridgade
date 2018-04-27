@@ -18,7 +18,7 @@ table {border-collapse:collapse; margin:auto; width:75%; text-align:center;}
 <th> ORIGINAL LOCATION </th>
 <th> ORIGINAL OWNER</th>
 <th> CURRENT LOCATION </th>
-<th> ORIGINAL OWNER </th>
+<th> CURRENT OWNER </th>
 </tr>
 TOP;
 
