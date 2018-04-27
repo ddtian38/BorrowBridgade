@@ -30,6 +30,3 @@ echo $find;
 }
 
 ?>
-
-</body>
-</html>
