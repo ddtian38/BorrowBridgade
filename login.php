@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<title>Login</title>
 	<link rel="stylesheet" type="text/css" href="login.css">
-		<link rel="icon" type="image/png" href="bblogo.jpg">
+	<link rel="icon" type="image/png" href="bblogo.jpg">
 
 </head>
 <body>
