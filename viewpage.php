@@ -1,5 +1,5 @@
 <?php
-
+echo "view all option";
 if(isset($_POST['viewall'])){
 unset($_POST['submit']);
 
@@ -21,8 +21,7 @@ if (empty($connect))
 
 // Get data from a table in the database and print it out
 
-$result = mysqli_query($connect,"SELECT * from items ORDER BY original_location,current_location, category, name");
-
+$result = mysqli_query($connect,"SELECT * from items ORDER BY orig_location,category;");
 
 // Display the results table
 
