@@ -12,21 +12,21 @@
 	<h1>BorrowBrigade</h1></div>
 	<div class="nav">
 	  <a href="index.html">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	  <a href="login.html">Login</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  <a href="login.php">Login</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	  <a href="signup.html">Sign-up</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	  <a href="contact.html">Contact</a>
 	</div>
 
 <h2>Login</h2><hr>
-<?php>
-  $logged = false;
-  
+<?php
+  if (!isset($_COOKIE["usertype"])) {
 
-?>
+print<<<FORM
+
 <div id="container">
 	<div class="row">
 		<div class="column">
-			<form id="loginForm" method= "post" action="http://www.cknuckles.com/cgi/echo.cgi">		
+			<form id="loginForm" method= "post" action="loginVerify.php">		
 				<div>
 					<label for="user">Username:</label>
 					<input type="text" id="user" name="user">
@@ -56,3 +56,11 @@
 	</div>		
 </body>
 </html>
+FORM;
+}
+else {
+  $type = $_COOKIE["usertype"];
+  $url = $type . "home.php";
+  header("location: $url");
+}
+?>

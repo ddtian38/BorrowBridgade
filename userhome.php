@@ -18,6 +18,7 @@ width:15%;
 <body>
 <h3>Please choose from the following:</h3>
 <form>
+<br>&nbsp;<input class="btn btn-success" type="button" onclick="location.href='index.html'" value="Go Home" id="home"><br>
 <br>&nbsp;<input type="button" class="btn btn-info" onclick="location.href='request.php'" value="Request an Item" id="view"><br>
 <br>&nbsp;<input type="button" class="btn btn-info" onclick="location.href='view.php'" value="Search for Items" id="view"><br>
 <br>&nbsp;<input type="button" class="btn btn-danger" value="Logout" onclick="location.href='logout.php'"id="logout"><br>

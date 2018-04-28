@@ -38,12 +38,14 @@ if(mysqli_stmt_num_rows($stmt) === 1){
 			$fname = $row[2];
                		session_start();
 			$_SESSION["admin"] = $username;
+			setcookie("usertype", "admin", time()+600);
 			header("location: adminhome.php ");
 		}
 		else{	
 			$fname = $row[2];
 			session_start();
 			$_SESSION["user"] = $username;
+			setcookie("usertype", "user", time()+600);
 			header("location: userhome.php ");
 		}
 	}
