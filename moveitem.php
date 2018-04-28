@@ -199,7 +199,7 @@ mysqli_close($connect);
 ?>
   </select>
   <br><br>
-  <input type="submit" name="submit"  value="Insert">
+  <input type="submit" name="submit"  value="Move">
 </form> 
 </body>
 </html>
