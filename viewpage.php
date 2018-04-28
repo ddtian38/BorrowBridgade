@@ -1,5 +1,4 @@
 <?php
-echo "view all option";
 if(isset($_POST['viewall'])){
 unset($_POST['submit']);
 
