@@ -1,0 +1,106 @@
+/*
+  File: hwk10.css
+  Author: Nathan Berryhill
+  Date Created: 22 April 2018
+  Date Modified: 22 April 2018
+*/
+
+html {
+  padding: 20px;
+  background-color: #fff;
+}
+
+body {
+  font-family: Courier, Monospace;
+  margin: auto;
+  max-width: 65%;
+}
+
+form {
+  background-color: #fff;
+  padding: 20px;
+  border: 3px solid #ff5300;
+  border-radius: 5px;
+}
+
+h1 {
+  font-family: Courier, Monospace;
+  color: #ff5300;
+  margin:auto;
+  text-align:center;
+}
+
+h3 {
+  font-family: Courier, Monospace;
+}
+
+div {
+  padding: 10px;
+}
+
+input[type=text] {
+  font-family: Courier, Monospace;
+  font-size: 12px;
+  padding: 5px;
+  margin: 5px;
+  border: 1px solid #aaa;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+label {
+  cursor: pointer;
+  display: block;
+  position: relative;
+  padding-left: 15px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+input[type=checkbox], input[type=radio] {
+  visibility:hidden;
+}
+
+.mark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #fff;
+  border-radius: 15px;
+  border: 1px solid #ff5300;
+}
+
+label input:checked ~ .mark {
+  background-color: #ff5300;
+}
+
+input[type=text]:focus, select:focus {
+  border: 1px solid #ff5300;
+  outline: none;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+  color: white;
+  width: 100px;
+  padding: 5px;
+  border: 1px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  outline: none;
+}
+
+input[type=submit] {
+background-color:#008000;
+}
+
+input[type=button] {
+  width:200px;
+  background-color: #CFB53B;
+}
+
+input[type=reset] {
+  background-color: #ff0000;
+}
