@@ -27,7 +27,7 @@ $result = mysqli_query($connect,"SELECT * from items ORDER BY orig_location,cate
 print <<<TABLE_START
   <table border="1">
     <tr>
-      <th>ID</th><th>ITEM</th><th>CATEGORY</th><th>QUANTITY</th><th>CURRENT LOCATION</th><th>CURRENT POSSESSOR</th><th>ORIGINAL LOCATION</th><th>ORIGINAL POSSESSOR</th>
+      <th>ID</th><th>ITEM</th><th>CATEGORY</th><th>QUANTITY</th><th>ORIGINAL LOCATION</th><th>ORIGINAL POSSESSOR</th><th>CURRENT LOCATION</th><th>CURRENT POSSESSOR</th>
     <tr>
 TABLE_START;
 while($row = $result->fetch_row())
