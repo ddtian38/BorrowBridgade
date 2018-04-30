@@ -5,30 +5,37 @@ print<<<TOP
 <title> View Student Record </title>
 <style>
 td, th {border: 1px solid black;}
-table {border-collapse:collapse; margin:auto; width:45%; text-align:center;}
+table {border-collapse:collapse; margin:auto; width:75%; text-align:center;}
 </style>
 </head>
 <body>
 <table>
 <tr>
-<th> ID </th>
-<th> LAST NAME </th>
-<th> FIRST NAME </th>
-<th> MAJOR </th>
-<th> GPA </th>
+<th> ITEM ID </th>
+<th> NAME </th>
+<th> CATEGORY </th>
+<th> QUANTITY </th>
+<th> ORIGINAL LOCATION </th>
+<th> ORIGINAL OWNER</th>
+<th> CURRENT LOCATION </th>
+<th> CURRENT OWNER </th>
 </tr>
 TOP;
 
 extract($_POST);
-$ID = $_POST["ID"];
-$LAST = $_POST["LAST"];
-$FIRST = $_POST["FIRST"];
+$name = $_POST["NAME"];
+$cat = $_POST["CAT"];
+$ogl = $_POST["OGL"];
+$ogo = $_POST["OGO"];
+$cl = $_POST["CL"];
+$co = $_POST["CO"];
+$posted = array($name, $cat, $ogl, $ogo, $cl, $co);
 
 // Connect to the MySQL database
 $host = "spring-2018.cs.utexas.edu";
-$user = "nathanrb";
-$pwd = "helloworld";
-$dbs = "cs329e_nathanrb";
+$user = "weiyi";
+$pwd = "A2LQHs~cPZ";
+$dbs = "cs329e_weiyi";
 $port = "3306";
 
 $connect = mysqli_connect ($host, $user, $pwd, $dbs, $port);
@@ -42,35 +49,39 @@ if (empty($connect))
 
 // Get data from a table in the database and print it out
 
-$table = "students";
-$sql1 = "SELECT * from $table WHERE ID='$ID'";
-$sql2 = "SELECT * from $table WHERE LAST='$LAST'";
-$sql3 = "SELECT * from $table WHERE FIRST='$FIRST'";
-$sql4 = "SELECT * from $table WHERE LAST='$LAST' AND FIRST='$FIRST'";
-if ($ID !== ''){
-    $result = mysqli_query($connect, $sql1);  
+$table = "items";
+$query = "SELECT * from ".$table." where ( ";
+$results = mysql_query("DESCRIBE ".$table);
+$zaehler = mysql_num_rows($results);
+$x = 0;
+while($row = $results->fetch_row()) {
+if ($row[$x] == "quantity") {
+  continue;
 }
 else {
-    if($LAST == '' && $FIRST != ''){
-        $result = mysqli_query($connect, $sql3);
-    }
-    else if($LAST != '' && $FIRST == ''){
-        $result = mysqli_query($connect, $sql2);
-    }
-    else if($LAST != '' && $FIRST != ''){
-        $result = mysqli_query($connect, $sql4);
-    }   
+$query = $query . $row . " LIKE '%" . $posted[$x] . "%'";
+if ($x<$zaehler) {
+  $query = $query." OR ";
 }
+}
+  $x++;
+}
+$query = $query.")";
+$result = mysql_query($query); 
 
 while ($row = $result->fetch_row())
 {
-  print "<tr>";
+print "<tr>";
   print "<td> $row[0] </td>";
   print "<td> $row[1] </td>";
   print "<td> $row[2] </td>";
   print "<td> $row[3] </td>";
   print "<td> $row[4] </td>";
+  print "<td> $row[5] </td>";
+  print "<td> $row[6] </td>";
+  print "<td> $row[7] </td>";
   print "</tr>";
+  
 }
 
 $result->free();

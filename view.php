@@ -15,7 +15,7 @@ td {text-align:right;}
 <td>CATEGORY: <input type="text" name="CAT"></td></tr>
 <tr><td>OG LOCATION: <input type="text" name="OGL"></td>
 <td>OG OWNER: <input type="text" name="OGO"></td></tr>
-<tr><td>CURRENT LOCATION: <input type="text" name"CL"></td>
+<tr><td>CURRENT LOCATION: <input type="text" name="CL"></td>
 <td>CURRENT OWNER: <input type="text" name="CO"></td></tr></table>
 <br><input type="submit" value="Submit">&nbsp;<input type="reset" value="Reset">
 <br><br><input type="button" onclick="location.href='all.php';" value="View all Items" />
