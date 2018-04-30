@@ -7,6 +7,12 @@
 	<link rel="stylesheet" type="text/css" href="index.css">
 	
 <script>
+function account() {
+if (document.cookie.indexOf("usertype") >= 0) {
+  document.getElementById("logged").innerHTML = "Account";
+}
+}
+
 var slideIndex = 1;
 showSlides(slideIndex);
 
@@ -35,12 +41,12 @@ function showSlides(n) {
 }
 </script>
 </head>
-<body onload="showSlides(1);">
+<body onload="showSlides(1);account()">
 	<div class="header"><img id="logo" src="bblogo.jpg" width="100" height="100">&nbsp;
 	<h1>BorrowBrigade</h1></div>
 	<div class="nav">
 	  <a href="index.html">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	  <a href="login.php">Login</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  <a id="logged" href="login.php">Login</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	  <a href="signup.html">Sign-up</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	  <a href="contact.html">Contact</a>
 	</div>
