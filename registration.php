@@ -2,7 +2,7 @@
 print<<<TOP
 <html>
 <head>
-<title> View Student Record </title>
+<title> All Accounts </title>
 <style>
 td, th {border: 1px solid black;}
 table {border-collapse:collapse; margin:auto; width:75%; text-align:center;}
@@ -35,6 +35,8 @@ if (empty($connect))
   die("mysqli_connect failed: " . mysqli_connect_error());
 }
 
+session_start();
+
 extract($_POST);
 $fname = $_POST['fname'];
 $lname = $_POST['lname'];
@@ -43,6 +45,7 @@ $user = $_POST['user'];
 $password = $_POST['repeatPassword'];
 $phone = $_POST['phone'];
 $admin = 0;
+$_SESSION["usertype"]="user";
 
 $stmt = mysqli_prepare ($connect, "INSERT INTO users VALUES (?, ?, ?, ?, ?, ?, ?)");
 mysqli_stmt_bind_param ($stmt, 'sssssss', $user, $password, $fname, $lname, $email, $phone, $admin);

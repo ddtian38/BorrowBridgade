@@ -1,62 +1,40 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>Login</title>
-	<link rel="stylesheet" type="text/css" href="login.css">
-	<link rel="icon" type="image/png" href="bblogo.jpg">
-
-</head>
-<body>
-	<div class="header"><img id="logo" src="bblogo.jpg" width="100" height="100">&nbsp;
-	<h1>BorrowBrigade</h1></div>
-	<div class="nav">
-	  <a href="index.html">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	  <a href="login.php">Login</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	  <a href="signup.html">Sign-up</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	  <a href="contact.html">Contact</a>
-	</div>
-
-<h2>Login</h2><hr>
 <?php
-  if (!isset($_COOKIE["usertype"])) {
 
-print<<<FORM
+if (!isset($_COOKIE["usertype"])) {
+print<<<PAGE
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-<div id="container">
-	<div class="row">
-		<div class="column">
-			<form id="loginForm" method= "post" action="loginVerify.php">		
-				<div>
-					<label for="user">Username:</label>
-					<input type="text" id="user" name="user">
-				</div>
-				<div>
-					<label for="password">Password:</label>
-					<input type="password" id="password" name="password">
-				</div>
-				<div id="buttons">
-					<input type="submit" name="register" value="Register">
-					<input type="reset" value="Reset">			
-				</div>	
-			</form>			
-		</div>
-		<div class="column">
-			<div id="firstTimeLogin">
-				<h4>First Time Login?</h4>
-				<p> If this is your first time logging in, <a href="signup.html">click here </a>to register </p>
-			</div>
-		</div>
-	</div>
-</div>
+    <title>Signin Template for Bootstrap</title>
 
-	<div class="footer">
-		<p>&copy; BorrowBrigade by DaNaWeiWare 2018 &middot; <a href="mailto:nathanrb@cs.utexas.edu">email</a></p>
-		
-	</div>		
-</body>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="login.css" rel="stylesheet">
+  </head>
+
+  <body class="text-center">
+    <form class="form-signin" method="POST" action="https://spring-2018.cs.utexas.edu/cs329e-mitra/nathanrb/FinalProj/loginVerify.php">
+      <img class="mb-4" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+      <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+      <label for="inputEmail" class="sr-only">Email address</label>
+      <input name="user" type="text" id="inputEmail" class="form-control" placeholder="Username" required autofocus>
+      <label for="inputPassword" class="sr-only">Password</label>
+      <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
+      <div class="checkbox mb-3">
+      </div>
+      <button class="btn btn-lg btn-success btn-block" type="submit">Sign in</button>
+      <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
+    </form>
+  </body>
 </html>
-FORM;
+PAGE;
 }
 else {
   $type = $_COOKIE["usertype"];

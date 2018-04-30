@@ -23,13 +23,14 @@ table {border-collapse:collapse; margin:auto; width:75%; text-align:center;}
 TOP;
 
 extract($_POST);
-$name = $_POST["NAME"];
-$cat = $_POST["CAT"];
-$ogl = $_POST["OGL"];
-$ogo = $_POST["OGO"];
-$cl = $_POST["CL"];
-$co = $_POST["CO"];
-$posted = array($name, $cat, $ogl, $ogo, $cl, $co);
+$name = (string)$_POST["NAME"];
+//$cat = (string)$_POST["CAT"];
+//$ogl = (string)$_POST["OGL"];
+//$ogo = (string)$_POST["OGO"];
+//$cl = (string)$_POST["CL"];
+//$co = (string)$_POST["CO"];
+//$posted = array("", $name, $cat, "", $ogl, $ogo, $cl, $co);
+//$Search = array();
 
 // Connect to the MySQL database
 $host = "spring-2018.cs.utexas.edu";
@@ -51,27 +52,29 @@ if (empty($connect))
 
 $table = "items";
 $query = "SELECT * from ".$table." where ( ";
-$results = array('item_id','name','category','quantity','orig_location','orig_possessor','current_location','current_possessor');
-$numcol = 8;
+$results = array("item_id","name","category","quantity","orig_location","orig_possessor","current_location","current_possessor");
+$numcol = 0;
+foreach ($posted as $value) {
+if ($value != ""){
+	$numcol++;
+}
+}
 $x = 0;
-while($x < $numcol) {
-if ($results[$x] == "quantity" or $results[$x] == "item_id" or $posted[$x] == "") {
-  continue;
-}
-else {
-$query = $query . $results[$x] . " LIKE '%" . mysql_real_escape_string($posted[$x]) . "%'";
-if ($x<$numcol) {
-  $query = $query." AND ";
-}
+while ($x < $numcol) {
+$coname = $results[$x];
+$searching = $posted[$x];
+$query = $query . $coname . " LIKE '%" . $searching . "%'";
+if ($x < $numcol - 1) {
+  $query = $query . " OR ";
 }
   $x++;
 }
-$query = $query.")";
+$query = $query . ")";
 $result = mysql_query($query); 
-
+echo $query;
 while ($row = $result->fetch_row())
 {
-print "<tr>";
+  print "<tr>";
   print "<td> $row[0] </td>";
   print "<td> $row[1] </td>";
   print "<td> $row[2] </td>";

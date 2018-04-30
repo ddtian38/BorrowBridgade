@@ -19,7 +19,7 @@ width:15%;
 <h3>Please choose from the following:</h3>
 <form>
 <br>&nbsp;<input class="btn btn-success" type="button" onclick="location.href='index.html'" value="Go Home" id="home"><br>
-<br>&nbsp;<input type="button" class="btn btn-info" onclick="location.href='view.php'" value="Search for Items" id="view"><br>
+<br>&nbsp;<input type="button" class="btn btn-info" onclick="location.href='viewpage.php'" value="Search for Items" id="view"><br>
 <br>&nbsp;<input class="btn btn-info" type="button" onclick="location.href='addpage.php'" value="Add a New Item" id="insert"><br>
 <br>&nbsp;<input type="button" class="btn btn-info" onclick="location.href='modifyitem.php'" value="Update an Item" id="update"><br>
 <br>&nbsp;<input type="button" class="btn btn-info" onclick="location.href='moveitem.php'" value="Move Item(s)" id="view"><br>
@@ -29,9 +29,13 @@ width:15%;
 </body>
 HOME;
 }
+else if (isset($_SESSION["user"])) {
+  echo "<h2>Redirecting to Page for Users...</h2>";
+  header ("refresh:1; url=userhome.php");
+}
 else {
-  echo "<h2>Not logged in - Redirecting in 3...2...1</h2>";
-  header("refresh:3; url=login.html");
+  echo "<h2>Not logged in - Redirecting...</h2>";
+  header("refresh:1; url=login.php");
 }
 ?>
 </html>

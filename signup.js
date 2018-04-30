@@ -63,7 +63,7 @@ form.submit(  function (event){
       event.preventDefault();
 	return false;
     }
-window.alert("Information being added our system");
+window.alert("Information being added to our system");
 return true;
 });
 
@@ -82,15 +82,15 @@ function checkUsername(){
                 response = $.trim(response);
                         if (response === "Taken")
                                 {
-                                $('#avaliable').html('<span style="color:white; background-color:red;">*Username not available</span>');
+                                $('#available').html('<span style="color:white; background-color:red;">Username not available</span>');
 
                                 }
                         else if(response === "Available")
                                 {
-                                $('#avaliable').html('<span style="color:white; background-color:green;">Username available</span>');
+                                $('#available').html('<span style="color:white; background-color:green;">Username available</span>');
                                 }
                         else{
-                                $('#avaliable').html('<span></span>');
+                                $('#available').html('<span></span>');
                         }
         }
 })

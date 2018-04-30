@@ -68,6 +68,7 @@ mysqli_close($connect);
 
 print<<<BOTTOM
 </table>
+<input class="btn btn-success" type="button" onclick="location.href='adminhome.php'" value="Go Home" id="home"><br>
 </body>
 </html>
 BOTTOM;

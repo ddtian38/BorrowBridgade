@@ -1,142 +1,44 @@
+html,
 body {
-    margin:auto;
-    max-width: 80%;
+  height: 100%;
 }
 
-h1 {
-    font-family: Courier, Monospace;
-	text-align: center;
-	font-size: 85px;
-    margin-top: 1.5%;
-    margin-bottom: 1.5%;
-    width:20%;
-    float:left;
-}
-h2{
-
-    font-size: 40px;
-    text-align: center;
-
-}
-.header {
-    text-align: center;
-    margin:auto;
-    overflow: auto;
-    width:80%;
+body {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #f5f5f5;
 }
 
-#logo {
-    margin-top: 1.5%;
-    display: inline;
-    float:left
-}
-
-.nav {
-  font-family: Franklin, Serif;
-  vertical-align: middle;
-  text-align: center;
-  text-decoration: none;
-  border-top: 1px double;
-  border-bottom:1px double;
-  font-size:20px;
-}
-
-.nav a:hover {
-  text-decoration: none;
-  color: #000;
-  background: #999;
-}
-
-.nav a {
-  text-decoration: none;
-  color: #000;
-}
-
-#container{
-    margin-top: 50px;
-    margin-bottom: 100px;
-    padding: 50px;
-    border: 2px solid black;
-    border-radius: 20px;
-}
-
-.column {
-    float: left;
-    width: 50%;
-}
-
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-
-form{
+.form-signin {
   width: 100%;
-  padding-left: 50px;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
 }
-
-#user{
-  padding-top: 5px;
-  padding-left:30px;
-  background: url(users.png) no-repeat scroll 7px 7px;
+.form-signin .checkbox {
+  font-weight: 400;
 }
-
-#password{
-  padding-top: 5px;
-  padding-left:30px;
-  background: url(password.png) no-repeat scroll 7px 7px;
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
 }
-
-input[type=text], input[type=password]{
-    width: 30%;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 20px;
-    padding-top:10px;
-    padding-bottom: 10px;
-    border: 0.5px solid black;
-    border-radius: 4px;
-    box-sizing: border-box; 
+.form-signin .form-control:focus {
+  z-index: 2;
 }
-
-input[type=submit], input[type=reset] {
-   width: 20%;
-   padding: 5px;
-   margin: 10px 0;
-   color: white;
-   background-color: lightblue;
-   border: none;
-   border: 1px solid black;
-   border-radius: 4px;
-   cursor: pointer;
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
 }
-
-#firstTimeLogin h4{
-
-  text-align:  center;
-  border-bottom: 1px solid black;
-
-}
-
-#firstTimeLogin{
-    width: 90%;
-    clear: left;
-    border: 10px solid black;
-    border-radius: 10px;
-}
-
-#firstTimeLogin p{
-
-  padding-left: 2em;
-
-}
-
-.footer {
-    float:bottom;
-    text-align: center;
-    margin-top:120px;
-    border-top: solid black 2px;
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
