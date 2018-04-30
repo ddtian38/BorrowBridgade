@@ -51,17 +51,17 @@ if (empty($connect))
 
 $table = "items";
 $query = "SELECT * from ".$table." where ( ";
-$results = mysql_query("DESCRIBE ".$table);
-$zaehler = mysql_num_rows($results);
+$results = array('item_id','name','category','quantity','orig_location','orig_possessor','current_location','current_possessor');
+$numcol = 8;
 $x = 0;
-while($row = $results->fetch_row()) {
-if ($row[$x] == "quantity") {
+while($x < $numcol) {
+if ($results[$x] == "quantity" or $results[$x] == "item_id" or $posted[$x] == "") {
   continue;
 }
 else {
-$query = $query . $row . " LIKE '%" . $posted[$x] . "%'";
-if ($x<$zaehler) {
-  $query = $query." OR ";
+$query = $query . $results[$x] . " LIKE '%" . mysql_real_escape_string($posted[$x]) . "%'";
+if ($x<$numcol) {
+  $query = $query." AND ";
 }
 }
   $x++;
@@ -81,7 +81,6 @@ print "<tr>";
   print "<td> $row[6] </td>";
   print "<td> $row[7] </td>";
   print "</tr>";
-  
 }
 
 $result->free();
