@@ -41,7 +41,7 @@ if (empty($connect))
 
 //print "Connected to ". mysqli_get_host_info($connect) . "<br /><br />\n";
 
-$table = "students";
+$table = "items";
 $sql = mysqli_query($connect, "DELETE FROM $table WHERE ID = '$ID'");
 
 if($sql){

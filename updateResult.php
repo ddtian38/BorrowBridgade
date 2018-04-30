@@ -2,7 +2,7 @@
 print<<<TOP
 <html>
 <head>
-<title> Update Student Record </title>
+<title> Update an  </title>
 <style>
 td, th {border: 1px solid black;}
 table {border-collapse:collapse; margin:auto; width:45%; text-align:center;}
@@ -24,6 +24,7 @@ TOP;
 if(isset($_POST['submit'])){
 
 extract($_POST);
+$id = $_POST["id"];
 $name = $_POST["NAME"];
 $category = $_POST["CAT"];
 $ogl = $_POST["OGL"];
@@ -47,12 +48,10 @@ if (empty($connect))
 
 //print "Connected to ". mysqli_get_host_info($connect) . "<br /><br />\n";
 
-$table = "students";
-mysqli_query($connect, "set @last = '$LAST'");
-mysqli_query($connect, "set @first = '$FIRST'");
-mysqli_query($connect, "set @major = '$MAJOR'");
-mysqli_query($connect, "set @gpa = '$GPA'");
-$sql = mysqli_query($connect, "UPDATE $table set LAST = CASE WHEN @last != '' THEN @last ELSE LAST END, FIRST = CASE WHEN @first != '' THEN @first ELSE FIRST END, MAJOR =  CASE WHEN @major != '' THEN @major ELSE MAJOR END, GPA = CASE WHEN @gpa != '' THEN @gpa ELSE GPA END where ID = '$ID'");
+$table = "items";
+$sql = "update $table columns (";
+if ($name != ""){$sql = $sql . $name . ","};
+if ($category != "") {$sql = $sql . $category . ","};
 
 if($sql){
 echo '<script type="text/javascript">alert("Update Successful. Displaying new table now.");</script>';

@@ -1,15 +1,18 @@
-html {
-  padding: 20px;
-  background-color: #fff;
-}
-td:first-child{
-  text-align:right;
-  padding-bottom:20px;
-}
 body {
   font-family: Times, Serif;
   margin: auto;
-  max-width: 65%;
+  max-width: 80%;
+}
+.header {
+    text-align: center;
+    margin:auto;
+    overflow: auto;
+    width:80%;
+}
+
+td:first-child{
+  text-align:right;
+  padding-bottom:20px;
 }
 .footer {
 	text-align:center;
@@ -23,18 +26,17 @@ form {
 }
 
 h1 {
-  font-family: Courier, Monospace;
-  color: #000;
-  margin:auto;
-  text-align:center;
+    font-family: Courier, Monospace;
+    text-align: center;
+    font-size: 85px;
+    margin-top: 1.5%;
+    margin-bottom: 1.5%;
+    width:20%;
+    float:left;
 }
 
 h3 {
   font-family: Courier, Monospace;
-}
-
-div {
-  padding: 10px;
 }
 
 input[type=text] {
@@ -118,32 +120,14 @@ input[type=reset] {
    border-radius: 4px;
    cursor: pointer;
 }
-/*
-input[type=button], input[type=reset] {
-  color: white;
-  width: 100px;
-  padding: 5px;
-  border: 1px;
-  font-size: 16px;
-  border-radius: 10px;
-  cursor: pointer;
-  outline: none;
-}
 
-input[type=button] {
-  background-color: #008000;
-}
-
-input[type=reset] {
-  background-color: #ff0000;
-}
-*/
 #logo {
+    margin-top: 1.5%;
     display: inline;
+    float:left
 }
-
 .nav {
-  font-family: Franklin, Serif;
+  font-family: Serif;
   vertical-align: middle;
   text-align: center;
   text-decoration: none;

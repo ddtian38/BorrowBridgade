@@ -201,12 +201,7 @@ if (empty($connect))
 //print "Connected to ". mysqli_get_host_info($connect) . "<br /><br />\n";
 
 // Get data from a table in the database and print it out
-/*
-$stmt = mysqli_prepare ($connect, "INSERT INTO $table VALUES (?, ?, ?, ?, ?)");
-mysqli_stmt_bind_param ($stmt, 'ssssd',$id, $last, $first, $major, $gpa);
-mysqli_stmt_execute($stmt);
-mysqli_stmt_close($stmt);
-*/
+
 $sql = mysqli_query($connect, "SELECT user_id, first_name, last_name FROM users");
 while ($row = $sql->fetch_assoc()){
 $userid=$row['user_id'];
@@ -220,5 +215,3 @@ mysqli_close($connect);
 </form> 
 </body>
 </html>
-
-

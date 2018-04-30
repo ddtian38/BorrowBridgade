@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,46 +5,36 @@
   <title>Contact us</title>
   <link rel="stylesheet" type="text/css" href="contact.css">
   <link rel="icon" type="image/png" href="bblogo.jpg">
-
 </head>
 <body>
-<h1>Contact <img id="logo" src="bblogo.jpg" width="50" height="50">BorrowBrigade</h1><br>
+<div class="header"><img id="logo" src="bblogo.jpg" width="100" height="100">&nbsp;
+        <h1>BorrowBrigade</h1></div>
 <div class="nav">
     <a href="./index.html">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <a href="./login.php">Login</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <a href="./signup.html">Sign-up</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <a href="./contact.html">Contact</a>
   </div><br>
-<form id="contact" method="POST">
+<form id="contact" action="contact.php" method="POST">
   <table>
     <tr>
-      <td><b>Full Name:</b></td><td><input type="text" name="Q5" id="Q5"><br><br></td>
+      <td><b>Full Name:</b></td><td><input type="text" name="Q1" id="Q1"><br><br></td>
     </tr>
     <tr>
-      <td><b>Email:</b></td><td><input type="text" name="Q6" id="Q6"><br><br></td>
+      <td><b>Email:</b></td><td><input type="text" name="Q2" id="Q2"><br><br></td>
     </tr>
     <tr>
-      <td><b>Phone Number:</b></td><td><input type="text" name="Q5" id="Q5"><br><br></td>
+      <td><b>Phone Number:</b></td><td><input type="text" name="Q3" id="Q3"><br><br></td>
     </tr>
     <tr>
-      <td><b>Comments / Suggestions:</b></td><td><textarea rows="5" cols="50" name="Q5" id="Q5"></textarea></td>
+      <td><b>Comments / Suggestions:</b></td><td><textarea rows="5" cols="50" name="Q4" id="Q4"></textarea></td>
     </tr>
-    <!--
-  <b>Full Name:</b><input type="text" name="Q5" id="Q5"><br><br>
-  <b>Email:</b><input type="text" name="Q6" id="Q6"><br><br>
-  <b>Phone Number:</b><input type="text" name="Q5" id="Q5"><br><br>
-  <b>Comments / Suggestions:</b><br><textarea rows="5" cols="50" name="Q5" id="Q5"></textarea>
--->
   </table>
 
-  <div class="buttons" id="entry">
-    <input type="button" value="Submit" id="submit">
+<div class="buttons" id="entry">
+    <input type="submit" name="submit" value="Submit" id="submit">
     <input type="reset" value="Clear">
-  </div>
-
-  
-
-
+</div>
 </form>
 <div class="footer">
     <p>&copy; BorrowBrigade by DaNaWeiWare 2018 &middot; <a href="mailto:nathanrb@cs.utexas.edu">email</a></p>
