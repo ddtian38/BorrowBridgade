@@ -1,3 +1,7 @@
+<?php
+  include "deleteResult.php";
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,9 +11,9 @@
 <body>
 <h3> Delete an Item </h3>
 
-<form method="POST" action="deleteResult.php">
+<form method="POST" action="">
 ID NUMBER: <input type="text" name="ID" required><br>
-<br><input type="submit" value="Submit">&nbsp;<input type="reset" value="Reset">
+<br><input type="submit" name="submit" value="Submit">&nbsp;<input type="reset" value="Reset">
 </form>
 </body>
 </html>
