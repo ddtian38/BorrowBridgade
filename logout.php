@@ -7,5 +7,5 @@ session_unset();
 session_destroy();
 setcookie("usertype", "", time()-3600); 
 echo "<h1>Destroying Session Files and Logging Out...</h1>";
-header( "refresh:2;url= login.html" );
+header( "refresh:1;url= login.html" );
 ?>
