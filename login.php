@@ -1,10 +1,8 @@
 <?php
-
 if (!isset($_COOKIE["usertype"])) {
 print<<<PAGE
-<!doctype html>
-<html lang="en">
-  <head>
+<!doctype html>  
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -20,7 +18,15 @@ print<<<PAGE
   </head>
 
   <body class="text-center">
-    <form class="form-signin" method="POST" action="https://spring-2018.cs.utexas.edu/cs329e-mitra/nathanrb/FinalProj/loginVerify.php">
+<div class="header"><img id="logo" src="bblogo.jpg" width="100" height="100">&nbsp;
+	<h1>BorrowBrigade</h1></div>
+	<div class="nav">
+	  <a href="index.html">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  <a id="logged" href="login.php">Login</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  <a href="signup.html">Sign-up</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  <a href="contact.html">Contact</a>
+	</div>    
+<form class="form-signin" method="POST" action="https://spring-2018.cs.utexas.edu/cs329e-mitra/nathanrb/FinalProj/loginVerify.php">
       <img class="mb-4" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
       <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
       <label for="inputEmail" class="sr-only">Email address</label>

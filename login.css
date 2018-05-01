@@ -42,3 +42,24 @@ body {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
+.nav {
+  font-family: Times;
+  vertical-align: middle;
+  text-align: center;
+  text-decoration: none;
+  border-top: 1px double;
+  border-bottom:1px double;
+  font-size:20px;
+}
+
+.nav a:hover {
+  text-decoration: none;
+  color: #000;
+  background: #999;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #000;
+}
+
