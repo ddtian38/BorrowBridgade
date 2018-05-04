@@ -52,6 +52,7 @@ echo "New item $name added to location $location";
   <meta charset="UTF-8">
   <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
   <script type ="text/javascript" src = "./insertValidate.js"></script>
+<style>body{padding:70px;}</style>
 </head>
 <body>
 

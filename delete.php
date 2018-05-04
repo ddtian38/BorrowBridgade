@@ -1,12 +1,17 @@
 <?php
   include("header.php");
-  include "deleteResult.php";
+  include("deleteResult.php");
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="hwk16.css">
+<style>
+body {padding:70px;}
+td, th {border: 1px solid black;}
+table {border-collapse:collapse; margin:auto; width:45%; text-align:center;}
+</style>
+<!-- <link rel="stylesheet" type="text/css" href="hwk16.css"> -->
 <title> Delete an Item </title>
 </head>
 <body>

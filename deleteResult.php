@@ -2,15 +2,6 @@
 if(isset($_POST['submit'])){
 
 print<<<TOP
-<html>
-<head>
-<title> Delete an Item </title>
-<style>
-td, th {border: 1px solid black;}
-table {border-collapse:collapse; margin:auto; width:45%; text-align:center;}
-</style>
-</head>
-<body>
 <table>
 <tr>
 <th> ID </th>
@@ -73,24 +64,9 @@ $result->free();
 
 // Close connection to the database
 mysqli_close($connect); 
-
-print<<<BOTTOM
-</table>
-</body>
-</html>
-BOTTOM;
 }
 else{
 print<<<TOP
-<html>
-<head>
-<title> Delete an Item </title>
-<style>
-td, th {border: 1px solid black;}
-table {border-collapse:collapse; margin:auto; width:45%; text-align:center;}
-</style>
-</head>
-<body>
 <table>
 <tr>
 <th> ID </th>
@@ -144,12 +120,5 @@ $result->free();
 
 // Close connection to the database
 mysqli_close($connect); 
-
-print<<<BOTTOM
-</table>
-</body>
-</html>
-BOTTOM;
-
 }
 ?>

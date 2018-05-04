@@ -10,16 +10,16 @@ print<<<PAGE
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Signin Template for Bootstrap</title>
-
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 
     <!-- Custom styles for this template -->
     <link href="login.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head>
 
   <body class="text-center">
-    <form class="form-signin" method="POST" action="registration.php">
+    <form id="userForm" class="form-signin" method="POST" action="registration.php">
       <img class="mb-4" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
       <h1 class="h3 mb-3 font-weight-normal">Register an Account</h1>
       <label for="inputFname" class="sr-only">First Name</label>
@@ -32,12 +32,10 @@ print<<<PAGE
       <input name="email" type="text" id="inputEmail" class="form-control" placeholder="Email address" required>
       
       <label for="inputPhone" class="sr-only">Phone</label>
-      <input name="phone" type="text" id="inputPhone" class="form-control" placeholder="123-456-7890" required>
+      <input name="phone" type="text" id="inputPhone" class="form-control" placeholder="123-456-7890" required pattern = "\d{3}[\-]\d{3}[\-]\d{4}">
       
       <label for="inputUname" class="sr-only">Username</label>
-      <input onkeyup="checkUsername();" name="user" type="text" id="inputUname" class="form-control" placeholder="Username" required>
-      
-      <span id="available"></span>
+      <input onkeyup="checkUsername();" name="user" type="text" id="inputUname" class="form-control" placeholder="Username" required><span id="available"></span>
 
       <label for="inputPassword" class="sr-only">Password</label>
       <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>

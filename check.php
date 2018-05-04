@@ -1,5 +1,4 @@
 <?php
-
 extract($_POST);
 $username = trim($_POST['username']);
 if($username === ''){
@@ -32,7 +31,4 @@ else{
 
 }
 }
-
-
-
 ?>

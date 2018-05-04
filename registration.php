@@ -45,7 +45,7 @@ $user = $_POST['user'];
 $password = $_POST['repeatPassword'];
 $phone = $_POST['phone'];
 $admin = 0;
-$_SESSION["usertype"]="user";
+$_SESSION["user"] = $user;
 
 $stmt = mysqli_prepare ($connect, "INSERT INTO users VALUES (?, ?, ?, ?, ?, ?, ?)");
 mysqli_stmt_bind_param ($stmt, 'sssssss', $user, $password, $fname, $lname, $email, $phone, $admin);
