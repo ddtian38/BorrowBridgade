@@ -161,9 +161,7 @@ $item_query->free();
 <!DOCTYPE html>
 <html>
 <head>
-  <title> Add New Item</title>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+<style>body {padding:70px;}</style>
   <script type ="text/javascript" src = "./insertValidate.js"></script>
 </head>
 <body>
