@@ -24,6 +24,7 @@ width:15%;
 <br>&nbsp;<input type="button" class="btn btn-info" onclick="location.href='modifyitem.php'" value="Update an Item" id="update"><br>
 <br>&nbsp;<input type="button" class="btn btn-info" onclick="location.href='moveitem.php'" value="Move Item(s)" id="view"><br>
 <br>&nbsp;<input type="button" class="btn btn-info" onclick="location.href='delete.php'" value="Delete an Item" id="delete"><br>
+<br>&nbsp;<input type="button" class="btn btn-info" onclick="location.href='updateContactInfo.php'" value="Update Profile" id="profileInfo"><br>
 </form>
 </body>
 HOME;

@@ -20,7 +20,7 @@
               <div class="carousel-caption text-left">
                 <h1>Introducing BorrowBrigade</h1>
                 <p>BorrowBrigade helps you to never lose track of your tools, games or supplies ever again. BorrowBrigade is a system to take control of what's yours. You control what goes in and what goes out. You get to determine who borrows what, when, and for how long.</p>
-                <p><a class="btn btn-lg btn-primary" href="signup.html" role="button">Sign up today</a></p>
+                <p><a class="btn btn-lg btn-primary" href="register.php" role="button">Sign up today</a></p>
               </div>
             </div>
           </div>

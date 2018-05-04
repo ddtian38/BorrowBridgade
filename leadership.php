@@ -1,24 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>Leadership</title>
-	<link rel="icon" type="image/png" href="bblogo.jpg">
-	<link rel="stylesheet" type="text/css" href="leadership.css">
-	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-	<script src="leadership.js"></script>
-
-</head>
-<body>
-	<div class="header"><img id="logo" src="bblogo.jpg" width="100" height="100">&nbsp;
-	<h1>BorrowBrigade</h1></div>
-	<div class="nav">
-	  <a href="./index.html">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	  <a href="./login.html">Login</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	  <a href="./signup.html">Sign-up</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	  <a href="./contact.html">Contact</a>
-	</div>
-	<div class="row">
+<?php include("header.php"); ?>
+<head><script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="leadership.js"></script></head>
+<link rel="stylesheet" type="text/css" href="leadership.css">
+<style>body{padding:70px;}</style>
 		<div id="people">
 		<ul>
 			<li>
@@ -36,7 +20,7 @@
 			<li>
 				<h3>Daniel Tian</h3> <br>
 				<img id="DT" src="./DT.jpg" alt="Daniel">
-				<h2> President &amp; CEO </h2><br>
+				<h2> President <br>&amp; CEO </h2><br>
 				<a class="readmorebtn">Read More</a>
     			<p class="more">
 				Daniel Tian holds a BS in mechanical engineering, and a PhD in janitorial services, both from
@@ -61,10 +45,5 @@
 		
 	</div>
 	</div>
-	<div class="footer">
-		<p>&copy; BorrowBrigade by DaNaWeiWare 2018 &middot; <a href="mailto:nathanrb@cs.utexas.edu">email</a></p>
-		
-	</div>
-
 </body>
 </html>
