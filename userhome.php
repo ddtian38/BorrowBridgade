@@ -18,7 +18,7 @@ width:15%;
 </head>
 <h3>Please choose from the following:</h3>
 <form>
-<br>&nbsp;<input type="button" class="btn btn-info" onclick="location.href='request.php'" value="Request an Item" id="view"><br>
+<br>&nbsp;<input type="button" class="btn btn-info" onclick="location.href='requestpage.php'" value="Request an Item" id="view"><br>
 <br>&nbsp;<input type="button" class="btn btn-info" onclick="location.href='viewpagev2.php'" value="Search for Items" id="view"><br>
 <br>&nbsp;<input type="button" class="btn btn-info" onclick="location.href='updateProfile.php'" value="Update Profile Information" id="profileInfo"><br>
 
