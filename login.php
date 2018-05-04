@@ -6,7 +6,7 @@ print<<<PAGE
 <!-- Custom styles for this template -->
     <link href="login.css" rel="stylesheet">
 </head>
-<form class="form-signin" method="POST" action="https://spring-2018.cs.utexas.edu/cs329e-mitra/nathanrb/FinalProj/loginVerify.php">
+<form class="form-signin" method="POST" action="loginVerify.php">
       <img class="mb-4" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
       <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
       <label for="inputEmail" class="sr-only">Email address</label>
