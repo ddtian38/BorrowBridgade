@@ -20,7 +20,7 @@
               <div class="carousel-caption text-left">
                 <h1>Introducing BorrowBrigade</h1>
                 <p>BorrowBrigade helps you to never lose track of your tools, games or supplies ever again. BorrowBrigade is a system to take control of what's yours. You control what goes in and what goes out. You get to determine who borrows what, when, and for how long.</p>
-                <p><a class="btn btn-lg btn-primary" href="signup.html" role="button">Sign up today</a></p>
+                <p><a class="btn btn-lg btn-primary" href="register.php" role="button">Sign up today</a></p>
               </div>
             </div>
           </div>
@@ -40,7 +40,7 @@
               <div class="carousel-caption text-right">
                 <h1>Our Leadership Team</h1>
                 <p>Establish in 2018, with several combined years of experience in the tech industry, BorrowBrigade leadership is committed to a whole new level of customer satisfaction.</p>
-                <p><a class="btn btn-lg btn-primary" href="leadership.html" role="button">View Leadership</a></p>
+                <p><a class="btn btn-lg btn-primary" href="leadership.php" role="button">View Leadership</a></p>
               </div>
             </div>
           </div>
