@@ -40,7 +40,7 @@
               <div class="carousel-caption text-right">
                 <h1>Our Leadership Team</h1>
                 <p>Establish in 2018, with several combined years of experience in the tech industry, BorrowBrigade leadership is committed to a whole new level of customer satisfaction.</p>
-                <p><a class="btn btn-lg btn-primary" href="leadership.html" role="button">View Leadership</a></p>
+                <p><a class="btn btn-lg btn-primary" href="leadership.php" role="button">View Leadership</a></p>
               </div>
             </div>
           </div>
