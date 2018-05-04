@@ -122,6 +122,18 @@
 
         <hr class="featurette-divider">
 
+	<div class="row featurette">
+          <div class="col-md-5">
+            <h2 class="featurette-heading">Here's a short tutorial to get you started</h2>
+            <p class="lead">Just kidding, the tutorial video is still in production. But in the meantime please enjoy this video of cats doing funny things</p>
+          </div>
+          <div class="col-md-7">
+            <iframe src="https://www.youtube.com/embed/hY7m5jjJ9mM" width="100%" height="100%"></iframe>
+          </div>
+        </div>
+
+ 
+        <hr class="featurette-divider">
         <!-- /END THE FEATURETTES -->
 
       </div><!-- /.container -->
