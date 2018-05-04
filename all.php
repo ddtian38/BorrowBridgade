@@ -1,4 +1,5 @@
 <?php
+include("header.php");
 print<<<TOP
 <html>
 <head>

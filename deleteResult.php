@@ -46,12 +46,12 @@ if (empty($connect))
 $table = "items";
 $sql = mysqli_query($connect, "DELETE FROM $table WHERE item_id = '$ID'");
 
-if($sql){
-echo '<script type="text/javascript">alert("Deletion Successful. Displaying new table now.");</script>';
-}
-else {
-echo '<script type="text/javascript">alert("Error occurred. Deletion failed.");</script>';
-}
+//if($sql){
+//echo '<script type="text/javascript">alert("Deletion Successful. Displaying new table now.");</script>';
+//}
+//else {
+//echo '<script type="text/javascript">alert("Error occurred. Deletion failed.");</script>';
+//}
 
 // Check if the data has been deleted properly to the table in the database
 $result = mysqli_query($connect, "SELECT * from $table order by current_possessor");

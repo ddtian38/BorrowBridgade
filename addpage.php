@@ -1,4 +1,5 @@
 <?php
+include("header.php");
 
 if(isset($_POST['submit'])){
 
@@ -119,5 +120,3 @@ mysqli_close($connect);
 </form> 
 </body>
 </html>
-
-

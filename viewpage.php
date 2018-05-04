@@ -179,13 +179,13 @@ mysqli_close($connect);
 <!DOCTYPE html>
 <html>
 <head>
-  <title> View Student Records </title>
+  <title> Search for Items </title>
   <meta charset="UTF-8">
   <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
 </head>
 <body>
 
-<h2>View Student Records</h2>
+<h2>Search for Items</h2>
 
 <form method="post"  action="">
   ID:<br>

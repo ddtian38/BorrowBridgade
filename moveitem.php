@@ -1,5 +1,5 @@
 <?php
-
+include("header.php");
 if(!isset($_POST['submit'])){
 $host = "spring-2018.cs.utexas.edu";
 $user = "weiyi";

@@ -1,5 +1,5 @@
 <?php
-
+include("header.php");
 if (!isset($_COOKIE["usertype"])) {
 print<<<PAGE
 <!doctype html>

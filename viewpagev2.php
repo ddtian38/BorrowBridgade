@@ -181,19 +181,47 @@ mysqli_close($connect);
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <link rel="icon" type="image/png" href="bblogo.jpg">
 
-    <title>View Items</title>
+    <title>BorrowBrigade Login</title>
 
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link href="bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="login.css" rel="stylesheet">
   </head>
+  <body>
 
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <img src="bblogo-white.png" width="40">&nbsp;&nbsp;<a class="navbar-brand" href="#">BorrowBrigade</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index1.html">Home</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="login.php">Login <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="signup.html">Sign-up</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+          <form class="form-inline mt-2 mt-md-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+    </header>
   <body class="text-center">
-<div class="header"><img id="logo" src="bblogo.jpg" width="100" height="100">&nbsp;
-	<h1>BorrowBrigade</h1></div>
 <form class="form-signin" method="POST" action="">
       <h1 class="h3 mb-3 font-weight-normal">Please Enter Search Parameters</h1>
       <label for="id" class="sr-only">ID:</label>
@@ -249,10 +277,8 @@ mysqli_close($connect);
   </select>
   <br><br>
   <input class="btn btn-lg btn-success btn-block" type="submit" name="submit"  value="Submit">
+<input type="submit" name="viewall" value="View All Records" class="btn btn-lg btn-success btn-block" >
 </form> 
-<form method="post" action="">
-  <input type="submit" name="viewall" value="View All Records" class="btn btn-lg btn-success btn-block" >
-</form>
 </body>
 </html>
 

@@ -1,5 +1,5 @@
 <?php
-
+include("header.php");
 if(!isset($_POST['submit'])){
 // TODO make a default table for viewing all the items
 $host = "spring-2018.cs.utexas.edu";
