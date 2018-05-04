@@ -59,12 +59,12 @@ $phone = $row[5];
 
 $stmt->free();
 mysqli_close($connect);
-/*
+
 $to = "danieltian31@yahoo.com";
 $subject = "Requesting Item - $itemRequested";
 $message = "Per this person's request  $fname $lname would like to $itemRequested to be moved from $originalLocation to $newLocation. \n Here is their contact information. Email: $email. Phone: $phone.";
 mail($to, $subject, $message);
-*/
+
 echo "<script> window.alert(\"$fname\") </script>";
 echo "<script> window.alert(\"Request has been sent. You will be notified soon.\") </script>";
 }
