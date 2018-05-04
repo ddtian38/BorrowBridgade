@@ -83,17 +83,14 @@ $table = "items";
 // If there is an id given, use that as the search parameter.
 
 if($id != ""){
-  echo "id option";
   $result = mysqli_query($connect,"SELECT * from $table WHERE item_id=$id");
 }
 
 elseif($id == "" && $name == "" && $category == "" && $curr_location == "" && $curr_possessor == "" && $orig_location == "" && $orig_possessor == ""){
-  echo "no fields option";
   $result = mysqli_query($connect,"SELECT * from $table");
 }
 
 else {
-  echo "some fields option";
   $querystart = "SELECT * FROM $table ";
   $whereclause = "WHERE ";
   $first = true;
@@ -143,7 +140,6 @@ else {
     $first = false;
   }
 
-  echo $querystart.$whereclause;
   $result = mysqli_query($connect,"$querystart$whereclause");
 
 }
