@@ -124,7 +124,7 @@
 
 	<div class="row featurette">
           <div class="col-md-5">
-            <h2 class="featurette-heading">Here's a short tutorial to get you started</h2>
+            <h2 class="featurette-heading">Here's a short tutorial to get you started.</h2>
             <p class="lead">Just kidding, the tutorial video is still in production. But in the meantime please enjoy this video of cats doing funny things</p>
           </div>
           <div class="col-md-7">

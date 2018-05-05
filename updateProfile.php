@@ -5,8 +5,9 @@ if (isset($_SESSION["user"])){
 print <<<FORM
 	 <link href="login.css" rel="stylesheet">
 	<link href="updateProfile.css" rel="stylesheet">
+	<style></style>
 	<form id="updateContactForm" method= "post">
-         <h1 class="h3 mb-3 font-weight-normal">Please fill out the form to update your information</h1>
+         <br><br><h1 class="h3 mb-3 font-weight-normal">Please fill out the form to update your information</h1>
 	<div class = "form-group">
 	<label for="fname"><b>First Name:</label>
 	<input type="text" class="form-control" name="fname" id="fname">

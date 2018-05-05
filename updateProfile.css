@@ -1,11 +1,9 @@
 body{
-	
-padding: 500px;
-
+padding: 450px 250px 250px 250px;
 }
 
 form{
- padding: 250px;
+ padding:10px;
  border: 2px solid black;
  border-radius: 5px;
 }
