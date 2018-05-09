@@ -1,7 +1,7 @@
 <?php
 include("header.php");
 session_start();
-if (isset($_SESSION["user"])){
+if (isset($_SESSION["user"]) || isset($_SESSION["admin"])){
 print <<<FORM
 	 <link href="login.css" rel="stylesheet">
 	<link href="updateProfile.css" rel="stylesheet">
