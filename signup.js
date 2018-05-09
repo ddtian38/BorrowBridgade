@@ -1,64 +1,64 @@
 var inputs = $("input");
 var form = $("#userForm");
 form.submit(  function (event){
-    if(!inputs.eq(3).val().match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/))
+    if(!inputs.eq(2).val().match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/))
     {
       window.alert("Invalid email address.")
       event.preventDefault();
       return false;
     }
 
-    if ((inputs.eq(5).val().length < 6) || (inputs.eq(5).val().length > 10))
+    if ((inputs.eq(4).val().length < 6) || (inputs.eq(4).val().length > 10))
     {
       window.alert ("Username must be between 6 and 10 characters.");
       event.preventDefault()
       return false;
     }
 
-    if (inputs.eq(5).val().match(/^[0-9]/)){
+    if (inputs.eq(4).val().match(/^[0-9]/)){
         window.alert("Username cannot start with a digit.");
       event.preventDefault();
 	return false;
     }
 
-    if(inputs.eq(5).val().match(/\W/)){
+    if(inputs.eq(4).val().match(/\W/)){
         window.alert("Username can only have letters and digits.");
       event.preventDefault();
 	return false;
     }
 
-    if ((inputs.eq(6).val().length < 6) || (inputs.eq(6).val().length > 10))
+    if ((inputs.eq(5).val().length < 6) || (inputs.eq(5).val().length > 10))
     {
       window.alert ("Password must be between 6 and 10 characters.");
       event.preventDefault();
       return false;
     }
 
-    if(inputs.eq(6).val().match(/\W/)){
+    if(inputs.eq(5).val().match(/\W/)){
         window.alert("Password can only have letters and digits.");
       event.preventDefault();
   	return false;
     }
 
-    if(!inputs.eq(6).val().match(/[A-Z]+/)){
+    if(!inputs.eq(5).val().match(/[A-Z]+/)){
         window.alert("Password must have at least one captial case letter.");
       event.preventDefault();
 	return false;
     }
 
-    if(!inputs.eq(6).val().match(/[a-z]+/)){
+    if(!inputs.eq(5).val().match(/[a-z]+/)){
         window.alert("Password must have at least one lower case letter.");
       event.preventDefault();
 	return false;
     }
 
-    if(!inputs.eq(6).val().match(/\d+/)){
+    if(!inputs.eq(5).val().match(/\d+/)){
         window.alert("Password must have at least one digit.");
       event.preventDefault();
 	return false;
     }
 
-    if(inputs.eq(6).val() !== inputs.eq(7).val()){
+    if(inputs.eq(5).val() !== inputs.eq(6).val()){
         window.alert("Password and repeated password must match.");
       event.preventDefault();
 	return false;
