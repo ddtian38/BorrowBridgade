@@ -1,7 +1,6 @@
 <?php
 include("header.php");
 if(!isset($_POST['submit'])){
-// TODO make a default table for viewing all the items
 $host = "spring-2018.cs.utexas.edu";
 $user = "weiyi";
 $pwd = "A2LQHs~cPZ";
@@ -51,11 +50,9 @@ if(isset($_POST['submit'])){
 extract($_POST);
 $id = $_POST["id"];
 $quantity = $_POST["quantity"];
-$location = $_POST["location"];
-$possessor = $_POST["possessor"];
+$location = $_POST["orig_location"];
+$possessor = $_POST["orig_possessor"];
 
-//generate a random unique id for each item entered
-$randid = substr(uniqid('', true), -6);
 // Connect to the MySQL database
 $host = "spring-2018.cs.utexas.edu";
 $user = "weiyi";
@@ -76,23 +73,8 @@ if (empty($connect))
 
 $table = "items";
 
-// Get the item that you are moving in the table
-$item_query = mysqli_query($connect, "SELECT * FROM $table WHERE item_id='$id';");
-$row = $item_query->fetch_assoc();
+mysqli_query($connect, "UPDATE $table SET quantity=$quantity,orig_location='$location',orig_possessor='$possessor' WHERE item_id='$id';");
 
-// Create a new row in the db with the quantity of item moved to a different current location
-$stmt = mysqli_prepare ($connect, "INSERT INTO $table VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
-mysqli_stmt_bind_param ($stmt, 'sssissss',$randid, $row['name'], $row['category'], $quantity, $location, $possessor, $row['orig_location'], $row['orig_possessor']);
-mysqli_stmt_execute($stmt);
-mysqli_stmt_close($stmt);
-
-// Modify the original entry by reducing the quantity by the amount that was moved
-$new_quantity = $row['quantity']-$quantity;
-$update_id = $row['item_id'];
-
-mysqli_query($connect, "UPDATE $table SET quantity=$new_quantity WHERE item_id='$update_id';");
-
-$item_name = $row['name'];
 
 
 // Need to delete rows where the item quantity is 0 and the current location and possessor do not match the original location and possessor
@@ -124,11 +106,6 @@ print <<<TABLE_END
   </table>
 TABLE_END;
 
-// Need to delete rows where the item quantity is 0 and the current location and possessor do not match the original location and possessor
-// This indicates that the borrowed item has been returned
-// Keeps the db from getting cluttered
-
-
 
 $result->free();
 //unset($_POST['viewall']);
@@ -136,23 +113,22 @@ $result->free();
 
 mysqli_close($connect);
 
-echo "$quantity $item_name moved to location $location";
 $item_query->free();
+
 }
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
-  <title> Add New Item</title>
+  <title> Modify Item</title>
   <meta charset="UTF-8">
   <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
-  <script type ="text/javascript" src = "./insertValidate.js"></script>
 <style>body {padding:70px;}</style>
 </head>
 <body>
 
-<h2>Move Item</h2>
+<h2>Update Item</h2>
 
 <form id="insert"  method="post"  action="">
   Item ID:<br>
@@ -161,11 +137,11 @@ $item_query->free();
   Quantity:<br>
   <input type="number" name="quantity">
   <br>
-  New Location:<br>
-  <input type="text" name="location">
+  Original Location:<br>
+  <input type="text" name="orig_location">
   <br>
-  New Possessor:<br>
-  <select name="possessor">
+  Original Possessor:<br>
+  <select name="orig_possessor">
 <?php
 
 // Connect to the MySQL database
@@ -200,9 +176,8 @@ mysqli_close($connect);
 ?>
   </select>
   <br><br>
-  <input type="submit" name="submit"  value="Move">
+  <input type="submit" name="submit"  value="Update">
 </form> 
 </body>
 </html>
-
 
